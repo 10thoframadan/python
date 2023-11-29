@@ -1,6 +1,5 @@
 import psutil
 import time
-
 current_processes = [(p.name(), p.pid) for p in psutil.process_iter()]
 print("Current processes:")
 for process, pid in current_processes:
