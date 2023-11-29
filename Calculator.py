@@ -8,7 +8,7 @@ def multiply(a, b):
   return a * b
 
 def divide(a, b):
-  if b == 0 :
+  if b == 0:
     raise ValueError("Cannot divide by zero")
   return a / b
 
@@ -17,16 +17,16 @@ def main():
   op = input("Choose an operator (+ - * /)\n: ")
   num2 = float(input("Type second number: "))
 
-  if op == "+" :
+  if op == "+":
     result = num1 + num2
 
-  elif op == "-" :
+  elif op == "-":
     result = num1 - num2
 
-  elif op == "*" :
+  elif op == "*":
     result = num1 * num2
 
-  elif op == "/" :
+  elif op == "/":
     result = num1 / num2
 
   else:
