@@ -1,20 +1,24 @@
+
 import socket
+from colorama import init, Fore
 
-def scan_port(host, port):
-  try:
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(2)
-    result = s.connect_ex((host, port))
-    if result == 0:
-      print(f"Port {port} is open")
-    s.close()
-  except socket.error:
-    print(f"Couldn't connect host: {host}")
+init()
+GREEN = Fore.GREEN
+RESET = Fore.RESET
+GRAY = Fore.LIGHTBLACK_EX
 
-def main():
-  host = input("Enter the target: ")
-  for port in range(1, 1001):
-    scan_port(host, port)
-
-if __name__ == "__main__":
-  main()
+def is_port_open(host, port):
+    s = socket.socket()
+    try:
+        s.connect((host, port))
+        s.settimeout(0.02)
+    except:
+        return False
+    else:
+        return True
+host = input("Enter the host: ")
+for port in range(1, 1025):
+    if is_port_open(host, port):
+        print(f"{GREEN}[+] {host}:{port} is open {RESET}")
+    else:
+        print(f"{GRAY}[!] {host}:{port} is closed {RESET}", end="\r")
