@@ -18,10 +18,10 @@ def scan_port(host, port):
         else:
             print(f"{GRAY}[!] Port {port} is closed {RESET}", end="\r")
     except Exception as exception:
-         print(f"{RED}Exception: {exception}")
+         print(f"{RED}Exception: {exception} {RESET}", end="\r")
 
 def main():
-    host = input(f"{YELLOW}[?] Enter the host: ")
+    host = input(f"{YELLOW}[?] Enter the host: {RESET}")
     for port in range(1, 1025):
         scan_port(host, port)
 if __name__ == "__main__":
