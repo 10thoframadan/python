@@ -17,7 +17,7 @@ def scan_port(host, port):
             print(f"{GREEN}[+] Port {port} is open {RESET}")
         else:
             print(f"{GRAY}[!] Port {port} is closed {RESET}", end="\r")
-     except Exception as exception:
+    except Exception as exception:
          print(f"{RED}Exception: {exception}")
 
 def main():
