@@ -1,14 +1,17 @@
 import openai
-                                                  def ask_openai(prompt, api_key):
-    openai.api_key = api_key                          response = openai.Completion.create(
+
+def ask_openai(prompt, api_key):
+    openai.api_key = api_key
+    response = openai.Completion.create(
             engine = "text-davinci-003",
             prompt = prompt,
-            max_tokens = 1000,                        )
+            max_tokens = 1000,
+    )
 
     return response.choices[0].text.strip()
 
 def main():
-    api_key = "YOUR_API_KEY_HERE"
+    api_key = "Your_api_key_here"
     while True:
         user_input = input('You: ')
         if user_input.lower() == 'exit':
