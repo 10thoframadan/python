@@ -5,8 +5,8 @@ text="""
 Hello world
 """
 response=client.audio.speech.create(
-    model="tts-1",
-    voice="echo",
+    model="tts-1" # models: tts-1 and tts-1-hd,
+    voice="echo" #voices: onyx and echo and fable and shimmer and nova,
     input=text,
     speed=1.0,
 )
