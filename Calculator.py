@@ -18,7 +18,7 @@ def main():
 
     operator = input("Choose an operator (+ - * /): ")
 
-    second_number = float(input("Type second number: ")
+    second_number = float(input("Type second number: "))
 
     if operator == "+":
         resulst = first_number + second_number
