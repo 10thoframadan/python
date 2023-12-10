@@ -34,7 +34,7 @@ def main():
 
     else:
         print("Invalid an operator")
-        return main
+        return main()
 
     print(f"{first_number} {operator} {second_number}")
 
