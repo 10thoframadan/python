@@ -1,38 +1,41 @@
 def add(a, b):
-  return a + b
+    return a + b
 
 def subtract(a, b):
-  return a - b
+    return a - b
 
 def multiply(a, b):
-  return a * b
+    return a * b
 
 def divide(a, b):
-  if b == 0:
-    raise ValueError("Cannot divide by zero")
-  return a / b
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
 
 def main():
-  num1 = float(input("Type first number: "))
-  op = input("Choose an operator (+ - * /)\n: ")
-  num2 = float(input("Type second number: "))
 
-  if op == "+":
-    result = num1 + num2
+    first_number = float(input("Type first number: "))
 
-  elif op == "-":
-    result = num1 - num2
+    operator = input("Choose an operator (+ - * /): ")
 
-  elif op == "*":
-    result = num1 * num2
+    second_number = float(input("Type second number: ")
 
-  elif op == "/":
-    result = num1 / num2
+    if operator == "+":
+        resulst = first_number + second_number
 
-  else:
-    print("Invalid an operator")
-    return main
+    elif operator == "-":
+        result = first_number - second_number
 
-  print(f"{num1} {op} {num2} = {result}")
+    elif operator == "*":
+        result = first_number * second_number
+
+    elif operator == "/":
+        result = first_number / second_number
+
+    else:
+        print("Invalid an operator")
+        return main
+
+    print(f"{first_number} {operator} {second_number}")
 
 main()
