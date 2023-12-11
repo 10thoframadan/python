@@ -23,5 +23,5 @@ def main():
     else:
         print("Invalid an operator")
         return main()
-    print("%f %s %f = %f" % (num1, op, num2, result))
+    print(f"{num1} {op} {num2} = {result}")
 main()
