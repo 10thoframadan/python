@@ -23,6 +23,6 @@ def main():
     else:
         print("Invalid an operator")
         return main()
-        print(f"{num1} {op} {num2} = {result}")
+    print(f"{num1} {op} {num2} = {result}")
 if __name__ == "__main__":
     main()
