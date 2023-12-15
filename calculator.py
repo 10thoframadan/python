@@ -8,21 +8,21 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero")
     return a / b
-    def main():
-        num1 = float(input("Type first number: "))
-        op = input("Choose an operator (+ - * /): ")
-        num2 = float(input("Type second number: "))
-        if op == "+":
-            result = num1 + num2
-        elif op == "-":
-            result = num1 - num2
-        elif op == "*":
-            result = num1 * num2
-        elif op == "/":
-            result = num1 / num2
-        else:
-            print("Invalid an operator")
-            return main()
+def main():
+    num1 = float(input("Type first number: "))
+    op = input("Choose an operator (+ - * /): ")
+    num2 = float(input("Type second number: "))
+    if op == "+":
+        result = num1 + num2
+    elif op == "-":
+        result = num1 - num2
+    elif op == "*":
+        result = num1 * num2
+    elif op == "/":
+        result = num1 / num2
+    else:
+        print("Invalid an operator")
+        return main()
         print(f"{num1} {op} {num2} = {result}")
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
