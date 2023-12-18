@@ -25,7 +25,7 @@ algorithm_map = {
 
 algorithm = algorithm_map.get(choice)
 if algorithm:
-  hash_result = generate_hash(data, algorithm):
+  hash_result = generate_hash(data, algorithm)
   print("Hash:", hash_result)
 else:
   print("Invalid choice.")
