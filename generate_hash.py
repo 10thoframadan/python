@@ -8,6 +8,7 @@ def generate_hash(data, algorithm):
   return hash_digest
 
 data = input("Enter the data to hash: ")
+
 print("Choose a hash algorithm:")
 print("1. MD5")
 print("2. SHA-1")
@@ -21,10 +22,10 @@ algorithm_map = {
   "3": "sha256",
   "4": "sha512"
 }
-algorithm = algorithm_map.get(choice)
 
+algorithm = algorithm_map.get(choice)
 if algorithm:
-  hash_result = generate_hash(data, algorithm)
+  hash_result = generate_hash(data, algorithm):
   print("Hash:", hash_result)
 else:
   print("Invalid choice.")
